@@ -28,8 +28,8 @@ class StaticController extends BaseController
             $ext = strtolower(substr($name, strrpos($name, '.')));
         }
 
-        // return md5(rand(1, 1000000) . time() . $name) . $ext;
-        return hash_file('sha256', $path). $ext;
+//        return hash_file('sha256', $path). $ext;
+        return hash_file('sha256', $path) . $ext;
     }
 
     public function actionImgUpload()
@@ -72,11 +72,11 @@ class StaticController extends BaseController
         $storage = new FileSystem('static/' . $path_prefix, true);
         $file = new File('file', $storage);
         
-        $file->setName($filename);
+        $file->setName($name);
         
         try
         {
-            $file->upload();
+            $file->upload($filename);
         }
         catch (\Exception $e)
         {
