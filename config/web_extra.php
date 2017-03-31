@@ -10,6 +10,12 @@ return [
             'read_write_timeout' => 0,
             'database' => 0,
         ],
+        
+        'qiniu-params' => [
+            'access_key' => "",
+            'secret_key' => "",
+            "file_url_prefix" => "",
+        ]
     ]
 
 ];
