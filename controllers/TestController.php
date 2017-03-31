@@ -97,14 +97,8 @@ class TestController extends Controller
     
     public function actionTest()
     {
-        set_time_limit(0);
-       $url = "http://qinggan.jiayuan.com/zhuanti/xingge/show.php?uname=%E5%92%A9%E5%92%A9";
-       
-       for ($a = 1; $a < 999; $a++)
-       {
-           sleep(3);
-           $response = curl("GET", $url);
-       }
+        $response = curl('get', 'whis.wang');
+        dump($response);
     }
     
 }
