@@ -54,11 +54,7 @@ class QiniuOssApi
     
     public function putFile($bucket_name, $path, $filename) {
         $upload_token = $this->getAuthManager()->uploadToken($bucket_name);
-        list($response, $error) = $this->getUploadManager()->putFile($upload_token, $filename, $path);
-        if ($error) {
-            return false;
-        }
-        return $response;
+        return $this->getUploadManager()->putFile($upload_token, $filename, $path);
     }
     
     public static function getBucket($app)

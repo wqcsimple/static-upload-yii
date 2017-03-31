@@ -72,9 +72,10 @@ class StaticController extends BaseController
         
         $qiniu_params = DXUtil::param('qiniu-params');
         $qiniu_oss_api = new QiniuOssApi($qiniu_params['access_key'], $qiniu_params['secret_key'], $qiniu_params['file_url_prefix']);
-        $response = $qiniu_oss_api->putFile($bucket_name, $path, $filename);
-        if (!$response) {
-            die('upload error');
+        list($response, $error) = $qiniu_oss_api->putFile($bucket_name, $path, $filename);
+        if ($error !== null) {
+            dump($error);
+            die;
         }
         
         return $qiniu_oss_api->file_url_prefix . $filename;
