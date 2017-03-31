@@ -5,11 +5,8 @@ namespace app\controllers;
 use app\components\DXUtil;
 use app\components\QiniuOssApi;
 use dix\base\controller\BaseController;
-use dix\base\exception\ServiceErrorSaveException;
 use dix\base\exception\ServiceErrorWrongParamException;
-use Qiniu\Storage\UploadManager;
-use Upload\File;
-use Upload\Storage\FileSystem;
+
 
 class StaticController extends BaseController
 {
