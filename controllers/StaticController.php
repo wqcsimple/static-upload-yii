@@ -27,7 +27,6 @@ class StaticController extends BaseController
             $ext = strtolower(substr($name, strrpos($name, '.')));
         }
 
-//        return hash_file('sha256', $path). $ext;
         return hash_file('sha256', $path) . $ext;
     }
 
