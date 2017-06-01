@@ -15,7 +15,12 @@ return [
             'access_key' => "xqupAU168xYM7YaYKmbeK1T83jQTZGYSm_ZKFwBa",
             'secret_key' => "5w4R06-MMu7V2wsMoyjO8fXMHQjDlFXnVDmAqhQt",
             "file_url_prefix" => "http://whisper.qiniudn.com/",
-        ]
+        ],
+
+
+        'redis-option' => [
+            'prefix' => 'static.server.api.',
+        ],
     ]
 
 ];
