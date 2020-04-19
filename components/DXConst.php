@@ -7,8 +7,8 @@ class DXConst extends \dix\base\component\DXConst
     const WEIGHT_DELETED = -1;           //用户已删除该数据
     
     
-    const ALIYUN_OSS_ACCESS_KEY_ID = "GFsvW1dOVH6UE6W4";
-    const ALIYUN_OSS_ACCESS_KEY_SECRET = "Iq2IWCsj3sSZDqwncuzhaq7RXQqrdD";
+    const ALIYUN_OSS_ACCESS_KEY_ID = "";
+    const ALIYUN_OSS_ACCESS_KEY_SECRET = "";
     const ALIYUN_OSS_END_POINT = "oss-cn-shanghai.aliyuncs.com";                    
 //    const ALIYUN_OSS_END_POINT = "oss-cn-shanghai-internal.aliyuncs.com";
     
